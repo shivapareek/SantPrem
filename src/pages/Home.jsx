@@ -167,8 +167,8 @@ const Home = () => {
       
       await account.createOAuth2Session(
         "google",
-        "http://localhost:5173/?loggedIn=true",
-        "http://localhost:5173/"
+        "https://sant-prem.vercel.app/?loggedIn=true",
+        "https://sant-prem.vercel.app/"
       );
       
       // Note: The redirect will happen automatically, so success toast will be shown in useEffect
