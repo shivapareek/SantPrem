@@ -14,19 +14,19 @@ import MeditationZone from "./pages/MeditationZone";
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="flex h-screen overflow-hidden bg-black text-white font-sans">
-        <Sidebar />
-        <div className="flex-1 overflow-y-auto">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/bhajan" element={<div className="pb-20"><BhajanZone /></div>} />
-            <Route path="/vaani" element={<div ><VaaniZone /></div>} />
-            <Route path="/chatbot" element={<div ><ChatbotZone /></div>} />
-            <Route path="/diary" element={<div ><DiaryZone /></div>} />
-            <Route path="/meditation" element={<div ><MeditationZone /></div>} />
-          </Routes>
+        <div className="flex h-screen overflow-hidden bg-black text-white font-sans">
+          <Sidebar />
+          <div className="flex-1 overflow-y-auto">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/bhajan" element={<div className="pb-20"><BhajanZone /></div>} />
+              <Route path="/vaani" element={<VaaniZone />} />
+              <Route path="/chatbot" element={<ChatbotZone />} />
+              <Route path="/diary" element={<DiaryZone />} />
+              <Route path="/meditation" element={<MeditationZone />} />
+            </Routes>
+          </div>
         </div>
-      </div>
     </BrowserRouter>
   );
 };

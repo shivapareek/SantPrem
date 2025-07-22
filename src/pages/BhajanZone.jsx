@@ -206,103 +206,107 @@ const BhajanZone = () => {
   };
 
 return (
-  <div className="flex flex-col gap-4 p-4 sm:p-6 bg-black text-white min-h-screen pb-[100px] overflow-y-auto no-scrollbar">
-    <h2 className="text-2xl sm:text-3xl font-bold text-yellow-400 mb-4 sm:mb-6 text-center">
-      Bhajan Zone
-    </h2>
+   <div className="relative flex flex-col gap-4 p-4 sm:p-6 bg-black text-white min-h-screen pb-[100px] overflow-y-auto no-scrollbar">
+      {/* Blur Background Effects */}
+      <div className="absolute top-10 left-10 w-72 h-72 bg-yellow-500/20 blur-[100px] rounded-full pointer-events-none z-0" />
+      <div className="absolute bottom-10 right-10 w-72 h-72 bg-pink-500/20 blur-[100px] rounded-full pointer-events-none z-0" />
 
-    <div className="flex flex-col sm:flex-row justify-center items-center mb-4 gap-3 sm:gap-4">
-      {[{
-        active: isShuffling,
-        toggle: () => setIsShuffling(!isShuffling),
-        Icon: Shuffle,
-        label: "Shuffle",
-      }, {
-        active: isRepeating,
-        toggle: () => setIsRepeating(!isRepeating),
-        Icon: Repeat,
-        label: "Repeat",
-      }].map(({ active, toggle, Icon, label }, i) => (
-        <button
-          key={i}
-          onClick={toggle}
-          className={`group flex items-center gap-2 px-4 py-2 rounded-full border-2 transition-all duration-200 text-sm sm:text-base ${
-            active
-              ? "bg-yellow-400 text-black border-yellow-300 scale-105 hover:cursor-pointer"
-              : "bg-gray-800 text-yellow-400 border-gray-600 hover:bg-gray-700 hover:scale-105 hover:cursor-pointer"
-          }`}
-          title={`Toggle ${label}`}
-        >
-          <Icon size={18} className={active ? "text-black" : "text-yellow-400 group-hover:text-yellow-300"} />
-          <span>{label}</span>
-        </button>
-      ))}
-    </div>
+      <h2 className="text-2xl sm:text-3xl font-bold text-yellow-400 mb-4 sm:mb-6 text-center z-10">
+        Bhajan Zone
+      </h2>
 
-    {data.length === 0 ? (
-      <div className="flex justify-center mt-10">
-        <div className="h-6 w-6 border-2 border-yellow-400 border-t-transparent rounded-full animate-spin" />
-      </div>
-    ) : (
-      data.map((item, index) => {
-        const isCurrent = currentIndex === index;
-        return (
-          <div
-            key={index}
-            className={`flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 sm:gap-6 bg-white/10 rounded-xl p-4 hover:bg-white/20 transition-all duration-200 hover:scale-[1.01] ${
-              isCurrent ? "ring-2 ring-yellow-400/60 ring-offset-2 ring-offset-black" : ""
+      <div className="flex flex-col sm:flex-row justify-center items-center mb-4 gap-3 sm:gap-4 z-10">
+        {[{
+          active: isShuffling,
+          toggle: () => setIsShuffling(!isShuffling),
+          Icon: Shuffle,
+          label: "Shuffle",
+        }, {
+          active: isRepeating,
+          toggle: () => setIsRepeating(!isRepeating),
+          Icon: Repeat,
+          label: "Repeat",
+        }].map(({ active, toggle, Icon, label }, i) => (
+          <button
+            key={i}
+            onClick={toggle}
+            className={`group flex items-center gap-2 px-4 py-2 rounded-full border-2 transition-all duration-200 text-sm sm:text-base ${
+              active
+                ? "bg-yellow-400 text-black border-yellow-300 scale-105 hover:cursor-pointer"
+                : "bg-gray-800 text-yellow-400 border-gray-600 hover:bg-gray-700 hover:scale-105 hover:cursor-pointer"
             }`}
+            title={`Toggle ${label}`}
           >
-            <div className="flex items-center sm:items-start justify-center sm:justify-start gap-3 w-full sm:w-auto">
-              <span className="hidden sm:inline text-sm text-neutral-500 w-5">{index + 1}.</span>
-              <img
-                src={item.image}
-                alt={item.title}
-                loading="lazy"
-                className="w-24 h-24 sm:w-16 sm:h-16 rounded-md object-cover"
-              />
-            </div>
-            <div className="flex-1 w-full overflow-hidden">
-              <h3 className="text-base sm:text-lg font-semibold text-yellow-300 truncate flex items-center justify-center sm:justify-start gap-2">
-                {item.title}
-                {isCurrent && (
-                  <span className="text-xs bg-green-500/90 text-white px-2 py-0.5 rounded-full">
-                    Now Playing
-                  </span>
-                )}
-              </h3>
-              <p className="text-sm text-neutral-300 truncate">{item.artist}</p>
-              {item.duration && (
-                <p className="text-xs text-neutral-400">{formatDuration(item.duration)}</p>
-              )}
-            </div>
-            <button
-              onClick={() => handlePlay(index)}
-              aria-label={`Play ${item.title}`}
-              className={`p-3 sm:p-2 mt-2 sm:mt-0 rounded-full transition-all duration-150 ${
-                isCurrent && isPlaying
-                  ? "bg-yellow-500 text-black hover:bg-yellow-400 hover:cursor-pointer"
-                  : "bg-gray-700 text-yellow-300 hover:bg-gray-600 hover:cursor-pointer"
-              }`}
-            >
-              {isCurrent && isPlaying ? <Pause size={18} /> : <Play size={18} />}
-            </button>
-          </div>
-        );
-      })
-    )}
+            <Icon size={18} className={active ? "text-black" : "text-yellow-400 group-hover:text-yellow-300"} />
+            <span>{label}</span>
+          </button>
+        ))}
+      </div>
 
-    <PlayerFooter
-      currentTrack={data[currentIndex]}
-      audioRef={audioRef}
-      isPlaying={isPlaying}
-      currentTime={currentTime}
-      onPlayPause={handlePlayPause}
-      onNext={() => handlePlay((currentIndex + 1) % data.length)}
-      onPrev={() => handlePlay((currentIndex - 1 + data.length) % data.length)}
-    />
-  </div>
-);
+      {data.length === 0 ? (
+        <div className="flex justify-center mt-10 z-10">
+          <div className="h-6 w-6 border-2 border-yellow-400 border-t-transparent rounded-full animate-spin" />
+        </div>
+      ) : (
+        data.map((item, index) => {
+          const isCurrent = currentIndex === index;
+          return (
+            <div
+              key={index}
+              className={`flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 sm:gap-6 bg-white/10 rounded-xl p-4 hover:bg-white/20 transition-all duration-200 hover:scale-[1.01] ${
+                isCurrent ? "ring-2 ring-yellow-400/60 ring-offset-2 ring-offset-black" : ""
+              } z-10`}
+            >
+              <div className="flex items-center sm:items-start justify-center sm:justify-start gap-3 w-full sm:w-auto">
+                <span className="hidden sm:inline text-sm text-neutral-500 w-5">{index + 1}.</span>
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  loading="lazy"
+                  className="w-24 h-24 sm:w-16 sm:h-16 rounded-md object-cover"
+                />
+              </div>
+              <div className="flex-1 w-full overflow-hidden">
+                <h3 className="text-base sm:text-lg font-semibold text-yellow-300 truncate flex items-center justify-center sm:justify-start gap-2">
+                  {item.title}
+                  {isCurrent && (
+                    <span className="text-xs bg-green-500/90 text-white px-2 py-0.5 rounded-full">
+                      Now Playing
+                    </span>
+                  )}
+                </h3>
+                <p className="text-sm text-neutral-300 truncate">{item.artist}</p>
+                {item.duration && (
+                  <p className="text-xs text-neutral-400">{formatDuration(item.duration)}</p>
+                )}
+              </div>
+              <button
+                onClick={() => handlePlay(index)}
+                aria-label={`Play ${item.title}`}
+                className={`p-3 sm:p-2 mt-2 sm:mt-0 rounded-full transition-all duration-150 ${
+                  isCurrent && isPlaying
+                    ? "bg-yellow-500 text-black hover:bg-yellow-400 hover:cursor-pointer"
+                    : "bg-gray-700 text-yellow-300 hover:bg-gray-600 hover:cursor-pointer"
+                }`}
+              >
+                {isCurrent && isPlaying ? <Pause size={18} /> : <Play size={18} />}
+              </button>
+            </div>
+          );
+        })
+      )}
+
+      <PlayerFooter
+        currentTrack={data[currentIndex]}
+        audioRef={audioRef}
+        isPlaying={isPlaying}
+        currentTime={currentTime}
+        onPlayPause={handlePlayPause}
+        onNext={() => handlePlay((currentIndex + 1) % data.length)}
+        onPrev={() => handlePlay((currentIndex - 1 + data.length) % data.length)}
+      />
+    </div>
+  );
 };
 
 export default BhajanZone;
