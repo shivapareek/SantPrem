@@ -165,11 +165,14 @@ const Home = () => {
     try {
       showToast('loading', 'Connecting to SantPrem', 'Establishing connection with your spiritual journey...');
       
-      await account.createOAuth2Session(
-        "google",
-        "https://sant-prem.vercel.app/?loggedIn=true",
-        "https://sant-prem.vercel.app/"
-      );
+    account.createOAuth2Session(
+  'google',
+  'https://sant-prem.vercel.app/?loggedIn=true',
+  'https://sant-prem.vercel.app/'
+);
+
+
+
       
       // Note: The redirect will happen automatically, so success toast will be shown in useEffect
     } catch (error) {
