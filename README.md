@@ -66,7 +66,7 @@
 
 | Frontend        | Backend / Auth       |
 |-----------------|----------------------|
-| React.js        | Firebase / Appwrite  |
+| React.js        |    Appwrite          |
 | Tailwind CSS    |  Node/Express        |
 
 ---
