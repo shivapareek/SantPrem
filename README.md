@@ -9,67 +9,80 @@
   <img src="https://img.shields.io/badge/React-%5E18-blue?style=flat&logo=react" />
   <img src="https://img.shields.io/badge/TailwindCSS-%5E3-blueviolet?style=flat&logo=tailwindcss" />
   <img src="https://img.shields.io/badge/Firebase/Auth-green?style=flat&logo=firebase" />
-  <img src="https://img.shields.io/badge/YouTube%20Shorts-Embedded-red?style=flat&logo=youtube" />
   <img src="https://img.shields.io/badge/Appwrite-Secure%20Auth-orange?style=flat&logo=appwrite" />
+  <img src="https://img.shields.io/badge/Flask-Gemini%202.5-black?style=flat&logo=flask" />
+  <img src="https://img.shields.io/badge/Spotify%20API-Music%20Integration-brightgreen?style=flat&logo=spotify" />
+  <img src="https://img.shields.io/badge/YouTube%20Shorts-Embedded-red?style=flat&logo=youtube" />
 </p>
 
 ---
 
 ## ✨ Overview
 
-> **SantPrem** is a soulful, mobile-friendly web app inspired by the teachings of **Premanand Ji Maharaj**. It integrates spirituality with emotional expression through devotional bhajans, embedded YouTube motivation, journaling, and meditation – all wrapped in a smooth, modern UI.
+> **SantPrem** is a soulful, mobile-friendly web app inspired by the teachings of **Premanand Ji Maharaj**.  
+> It integrates spirituality with emotional expression through bhajans, motivation, journaling, and guided meditation – all inside a smooth modern UI.
 
+---
+
+## 📹 Demo Video
+
+▶️ [Click here to watch the demo](https://drive.google.com/file/d/1TA-sKgdsF8KcVR1hqEZJYTG18EL9hr0y/view?usp=sharing)
 ---
 
 ## 🌟 Key Zones & Features
 
 ### 🎧 Bhajan Zone
-- Listen to calming **bhajans** with a sleek audio player.
-- Peaceful background and distraction-free experience.
+- Listen to calming **bhajans** via Spotify API.
+- Immersive background and minimal player.
 
 ### 📺 Sant Vaani Zone
-- Watch **YouTube Shorts** for spiritual and motivational inspiration.
-- Fully embedded with playback controls.
+- Watch embedded **YouTube Shorts** for inspiration.
 
 ### ✍️ Man Ki Baat Zone
-- Express your thoughts through a personal **rich-text journal**.
-- Features **bold**, *italic*, font control, and mood-friendly design.
-- Stores your thoughts securely (locally or in future versions with sync).
+- Personal **rich-text journal** with mood-friendly design.
+- Bold, italic, font controls, and local storage.
 
 ### 🧘 Radha Jaap Zone
-- Practice **Radha Jaap** or guided spiritual meditation.
-- Soothing design and soft transitions to enhance focus.
+- Guided **spiritual meditation** with soft UI.
 
-### 🧑‍💬 SantPrem AI Zone
-- Ask questions to a **chatbot trained on teachings of Premanand Ji Maharaj**.
-- Get instant spiritual guidance and motivation anytime.
+### 🤖 SantPrem AI Zone
+- Ask anything to **Gemini Pro 2.5** via Flask backend.
+- Instant spiritual advice based on Maharaj Ji's teachings.
 
 ---
 
 ## 🔐 Auth & Access
 
-- Dual **Authentication Support** with **Firebase** and **Appwrite**
-- Session management, protected routes & user-friendly login/signup pages
+- Dual **Authentication** via **Firebase** and **Appwrite**
+- Protected routing and smooth Google login
 
 ---
 
 ## 🌙 UI/UX Highlights
 
-- ✨ Smooth page transitions & animations
-- 📱 100% Responsive and mobile-first
-- 💬 Custom toast notifications
-- 🧠 Minimal & soft spiritual design
+- 💫 Animated page transitions
+- 📱 Fully responsive (mobile-first)
+- 🔔 Toast notifications
+- 🕉️ Elegant spiritual UI
 
 ---
 
 ## 🛠 Tech Stack
 
-| Frontend        | Backend / Auth       |
-|-----------------|----------------------|
-| React.js        |    Appwrite          |
-| Tailwind CSS    |  Node/Express        |
+| Frontend        | Backend / Auth       | AI / APIs             |
+|-----------------|----------------------|------------------------|
+| React.js        | Node, Flask, Appwrite| Gemini Pro 2.5 (Flask) |
+| Tailwind CSS    | Firebase Auth        | Spotify API            |
 
 ---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/shivapareek/santprem.git
+cd santprem
 
 ## 🚀 Getting Started
 
