@@ -112,16 +112,19 @@ GOOGLE_API_KEY = ""
 
 ## 🧠 Contribution
 We welcome contributions that improve UI, performance, or add spiritual features!
-🛠️ Fork the repo
-📥 Create your feature branch (git checkout -b feature-name)
-✅ Commit changes and push (git push origin feature-name)
-🔁 Open a Pull Request
+
+- 🛠️ Fork the repo  
+- 📥 Create your feature branch (`git checkout -b feature-name`)  
+- ✅ Commit changes and push (`git push origin feature-name`)  
+- 🔁 Open a Pull Request
 
 ## 📌 Roadmap / Future Plans
- Save journal entries to cloud (per-user)
- Add daily reminder system (meditation / journaling)
- Add Hindi/English language toggle
- User mood tracker with emojis
- Push notifications for new bhajans or videos
+
+- Save journal entries to cloud (per-user)  
+- Add daily reminder system (meditation / journaling)  
+- Add Hindi/English language toggle  
+- User mood tracker with emojis  
+- Push notifications for new bhajans or videos  
+
 
 <p align="center"> Built with ❤️ by <b>Shiva</b><br/> to spread Bhakti, Positivity, and Peace.<br/> <b>जय श्री राम 🙏</b> </p>
