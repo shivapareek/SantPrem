@@ -27,20 +27,20 @@
 - Listen to calming **bhajans** with a sleek audio player.
 - Peaceful background and distraction-free experience.
 
-### 📺 Motivation Zone
+### 📺 Sant Vaani Zone
 - Watch **YouTube Shorts** for spiritual and motivational inspiration.
 - Fully embedded with playback controls.
 
-### ✍️ Journaling Zone
+### ✍️ Man Ki Baat Zone
 - Express your thoughts through a personal **rich-text journal**.
 - Features **bold**, *italic*, font control, and mood-friendly design.
 - Stores your thoughts securely (locally or in future versions with sync).
 
-### 🧘 Meditation Zone
+### 🧘 Radha Jaap Zone
 - Practice **Radha Jaap** or guided spiritual meditation.
 - Soothing design and soft transitions to enhance focus.
 
-### 🧑‍💬 Chatbot Zone
+### 🧑‍💬 SantPrem AI Zone
 - Ask questions to a **chatbot trained on teachings of Premanand Ji Maharaj**.
 - Get instant spiritual guidance and motivation anytime.
 
@@ -56,7 +56,6 @@
 ## 🌙 UI/UX Highlights
 
 - ✨ Smooth page transitions & animations
-- 🎨 Toggle between **Light** and **Dark Mode**
 - 📱 100% Responsive and mobile-first
 - 💬 Custom toast notifications
 - 🧠 Minimal & soft spiritual design
@@ -65,11 +64,10 @@
 
 ## 🛠 Tech Stack
 
-| Frontend        | Backend / Auth       | Hosting               |
-|-----------------|----------------------|------------------------|
-| React.js        | Firebase / Appwrite  | Vercel (Frontend)      |
-| Tailwind CSS    | Optional: Node/Express | Render / Firebase (Backend) |
-| React Router    | —                    | —                      |
+| Frontend        | Backend / Auth       |
+|-----------------|----------------------|
+| React.js        | Firebase / Appwrite  |
+| Tailwind CSS    |  Node/Express        |
 
 ---
 
@@ -78,7 +76,7 @@
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/santprem.git
+git clone https://github.com/shivapareek/santprem.git
 cd santprem
 ```
 ### 2️⃣ Install Dependencies
@@ -88,31 +86,15 @@ npm install
 ### 3️⃣ Start the Development Server
 ```bash
 npm run dev
-# or
-npm start
 ```
-### 4️⃣ Configure Firebase & Appwrite
+### 4️⃣ Configure Appwrite
 ```bash
-VITE_FIREBASE_API_KEY=your_api_key
-VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
-VITE_FIREBASE_PROJECT_ID=your_project_id
-VITE_APPWRITE_ENDPOINT=your_appwrite_url
-VITE_APPWRITE_PROJECT_ID=your_project_id
+VITE_APPWRITE_PROJECT_ID = ""
+VITE_APPWRITE_ENDPOINT = ""
+VITE_SPOTIFY_CLIENT_ID = ""
+VITE_SPOTIFY_CLIENT_SECRET= ""
 ...
 ```
-## 📁 Folder Structure
-santprem/
-├── public/
-├── src/
-│   ├── assets/         # Images, icons, bhajan audio
-│   ├── components/     # Reusable UI components
-│   ├── context/        # Global state/auth context
-│   ├── pages/          # Pages (Home, Bhajans, Shorts, Journal, Meditation)
-│   ├── routes/         # Protected routes and route setup
-│   └── App.jsx         # Main app entry
-├── .env.local
-├── package.json
-└── README.md
 
 ## 🧠 Contribution
 We welcome contributions that improve UI, performance, or add spiritual features!
