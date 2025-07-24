@@ -6,6 +6,9 @@
 </p>
 
 <p align="center">
+  <a href="https://sant-prem.vercel.app/">
+    <img src="https://img.shields.io/badge/Live-Demo-success?style=flat&logo=vercel" />
+  </a>
   <img src="https://img.shields.io/badge/React-%5E18-blue?style=flat&logo=react" />
   <img src="https://img.shields.io/badge/TailwindCSS-%5E3-blueviolet?style=flat&logo=tailwindcss" />
   <img src="https://img.shields.io/badge/Firebase/Auth-green?style=flat&logo=firebase" />
@@ -24,9 +27,16 @@
 
 ---
 
+## 🔗 Live Website
+
+🌐 **[Visit SantPrem](https://sant-prem.vercel.app/)** – Try the spiritual experience now!
+
+---
+
 ## 📹 Demo Video
 
 ▶️ [Click here to watch the demo](https://drive.google.com/file/d/1TA-sKgdsF8KcVR1hqEZJYTG18EL9hr0y/view?usp=sharing)
+
 ---
 
 ## 🌟 Key Zones & Features
@@ -60,10 +70,10 @@
 
 ## 🌙 UI/UX Highlights
 
-- 💫 Animated page transitions
-- 📱 Fully responsive (mobile-first)
-- 🔔 Toast notifications
-- 🕉️ Elegant spiritual UI
+- 💫 Animated page transitions  
+- 📱 Fully responsive (mobile-first)  
+- 🔔 Toast notifications  
+- 🕉️ Elegant spiritual UI  
 
 ---
 
