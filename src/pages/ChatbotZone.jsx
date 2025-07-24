@@ -3,7 +3,7 @@ import { Send, RefreshCcw } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-const API_URL = "http://localhost:4000/chat";
+const API_URL = "https://santprem-backend.onrender.com/chat";
 
 
 
